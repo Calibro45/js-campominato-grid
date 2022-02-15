@@ -12,10 +12,39 @@ console.log(playBtn);
 const campoMinatoWrap = document.querySelector('.campo-minato-wrap');
 console.log(campoMinatoWrap);
 
-playBtn.addEventListener('click', function() {
-
-    //console.log('click');
+function generaLivello(numBlocchi, numColonne) {
     
+    for (let i = 1; i <= numBlocchi; i++) {
+        
+        const blocco = i;
+        //console.log(i);
+        
+        const square = document.createElement('div');
+        //console.log(square);
+        
+        square.innerHTML = blocco;
+        
+        square.classList.add('square');
+        
+        square.style.width = ('calc(100% / ' + numColonne);
+        
+        campoMinatoWrap.append(square);
+        
+    }
+    
+}
+
+function reset() {
+
+    const reset = campoMinatoWrap.innerHTML = '';
+    return reset;
+}
+
+playBtn.addEventListener('click', function() {
+    //console.log('click');
+
+    reset();
+        
     const difficulty = selectMenu.value;
     //console.log(difficulty);
     
@@ -37,25 +66,3 @@ playBtn.addEventListener('click', function() {
             
 })
 
-
-function generaLivello(numBlocchi, numColonne) {
-    
-    for (let i = 1; i <= numBlocchi; i++) {
-            
-        const blocco = i;
-        //console.log(i);
-    
-        const square = document.createElement('div');
-        //console.log(square);
-    
-        square.innerHTML = blocco;
-    
-        square.classList.add('square');
-    
-        square.style.width = ('calc(100% / ' + numColonne);
-    
-        campoMinatoWrap.append(square);
-            
-    }
-
-}        

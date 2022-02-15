@@ -41,6 +41,11 @@ body {
     border: 1px solid black;
 }
 
+.blue {
+    background-color: #6495ed;
+    color: white;
+}
+
 .square:hover {
     cursor: pointer;
 }

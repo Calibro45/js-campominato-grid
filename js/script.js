@@ -29,6 +29,11 @@ function generaLivello(numBlocchi, numColonne) {
         square.style.width = ('calc(100% / ' + numColonne);
         
         campoMinatoWrap.append(square);
+
+        square.addEventListener('click', function() {
+
+            this.classList.add('blue');
+        })
         
     }
     
@@ -61,4 +66,3 @@ playBtn.addEventListener('click', function() {
     } 
             
 })
-

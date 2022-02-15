@@ -10,7 +10,23 @@ const playBtn = document.getElementById('play-cta');
 console.log(playBtn);
 
 playBtn.addEventListener('click', function() {
+    //console.log('click');
 
+    const difficulty = selectMenu.value;
+    //console.log(difficulty);
+
+    switch(difficulty) {
+
+        case '0':
+            console.log(difficulty);
+            break;
+        case '1':
+            console.log(difficulty);
+            break;
+        case '2':
+            console.log(difficulty);
+            break;
+    } 
 
 }) 
     

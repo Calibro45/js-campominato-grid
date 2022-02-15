@@ -6,11 +6,14 @@ con difficoltà 3 => tra 1 e 49 */
 const selectMenu = document.getElementById('difficulty');
 console.log(selectMenu);
 
-for (let i = 0; i < selectMenu.length; i++) {
-
-    const difficulty = selectMenu[i];
-    console.log(difficulty);
-}
-
 const playBtn = document.getElementById('play-cta');
 console.log(playBtn);
+
+playBtn.addEventListener('click', function() {
+
+
+}) 
+    
+   
+
+

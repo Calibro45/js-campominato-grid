@@ -26,9 +26,17 @@ body {
 }
 
 .campo-minato-wrap {
-    max-width: 515px;
+    width: 515px;
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 1;
     align-content: flex-start;
+}
+
+.square {
+    aspect-ratio: 1;
+    width: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

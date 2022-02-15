@@ -12,6 +12,8 @@ console.log(playBtn);
 const campoMinatoWrap = document.querySelector('.campo-minato-wrap');
 console.log(campoMinatoWrap);
 
+// funzione per generazione livello
+
 function generaLivello(numBlocchi, numColonne) {
     
     for (let i = 1; i <= numBlocchi; i++) {
@@ -30,6 +32,8 @@ function generaLivello(numBlocchi, numColonne) {
         
         campoMinatoWrap.append(square);
 
+        // evento click colonna per gestire bck color
+
         square.addEventListener('click', function() {
 
             this.classList.add('blue');
@@ -39,7 +43,11 @@ function generaLivello(numBlocchi, numColonne) {
     
 }
 
+// funzione per resettare la griglia
+
 const reset = () => campoMinatoWrap.innerHTML = '';
+
+// evento bottone per generare livello
 
 playBtn.addEventListener('click', function() {
     //console.log('click');

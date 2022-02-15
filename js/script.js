@@ -34,11 +34,7 @@ function generaLivello(numBlocchi, numColonne) {
     
 }
 
-function reset() {
-
-    const reset = campoMinatoWrap.innerHTML = '';
-    return reset;
-}
+const reset = () => campoMinatoWrap.innerHTML = '';
 
 playBtn.addEventListener('click', function() {
     //console.log('click');

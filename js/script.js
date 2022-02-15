@@ -9,27 +9,53 @@ console.log(selectMenu);
 const playBtn = document.getElementById('play-cta');
 console.log(playBtn);
 
-playBtn.addEventListener('click', function() {
-    //console.log('click');
+const campoMinatoWrap = document.querySelector('.campo-minato-wrap');
+console.log(campoMinatoWrap);
 
+playBtn.addEventListener('click', function() {
+
+    //console.log('click');
+    
     const difficulty = selectMenu.value;
     //console.log(difficulty);
-
+    
     switch(difficulty) {
-
+        
         case '0':
+            generaLivello(100, 10);
             console.log(difficulty);
             break;
         case '1':
+            generaLivello(81, 9);
             console.log(difficulty);
             break;
         case '2':
+            generaLivello(49, 7)
             console.log(difficulty);
-            break;
+            break;       
     } 
+            
+})
 
-}) 
+
+function generaLivello(numBlocchi, numColonne) {
     
-   
+    for (let i = 1; i <= numBlocchi; i++) {
+            
+        const blocco = i;
+        //console.log(i);
+    
+        const square = document.createElement('div');
+        //console.log(square);
+    
+        square.innerHTML = blocco;
+    
+        square.classList.add('square');
+    
+        square.style.width = ('calc(100% / ' + numColonne);
+    
+        campoMinatoWrap.append(square);
+            
+    }
 
-
+}        
